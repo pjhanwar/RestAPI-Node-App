@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>User Detail</title>
+    <link rel='stylesheet' href='/stylesheets/style.css' />
+</head>
+<body>
+<div class="container">
+    <h3><a href="/users">User List</a></h3>
+    <h1>User Detail</h1>
+    <table>
+        <tbody>
+
+        <tr>
+            <td>User Name</td>
+            <td>:</td>
+            <td><%= user.username %></td>
+        </tr>
+
+        <tr>
+            <td>Display Name</td>
+            <td>:</td>
+            <td><%= user.displayname %></td>
+        </tr>
+        <tr>
+            <td>Department</td>
+            <td>:</td>
+            <td><%= user.department %></td>
+        </tr>
+        </tbody>
+    </table>
+    <h3><a href="/users/edit/<%= user.username%>">EDIT</a></h3>
+</div>
+</body>
+</html>

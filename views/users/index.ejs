@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>User List</title>
+    <link rel='stylesheet' href='/stylesheets/style.css' />
+</head>
+<body>
+<div class="container">
+
+    <div style="position : relative;"><h3><a href="/users/add">Add User</a></h3></div>
+    <div style="position : relative; left : 250px; top : -34px;"><h3><a href="/users/delete">Delete User</a></h3></div>
+    <h1 style="position : relative; top:-10px">User List</h1>
+    <% if(users.length>0) { %>
+    <table>
+        <thead>
+            <th>User Name</th>
+            <th>Display Name</th>
+            <th>Department</th>
+        </tr>
+        </thead>
+        <tbody>
+
+        <% for(var i=0; i<users.length;i++) { %>
+        <tr>
+            <td><a href="/users/show/<%= users[i].username%>"><%= users[i].username%></a></td>
+            <td><%= users[i].displayname%></td>
+            <td><%= users[i].department%></td>
+        </tr>
+        <% } %>
+        </tbody>
+    </table>
+    <% } else { %>
+    <div style="position : relative; top : 10px; left : 120px;">No users found.</div>
+    <% } %>
+</div>
+</body>
+</html>
