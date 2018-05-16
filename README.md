@@ -6,6 +6,7 @@ The web service is used to query user data. It has the following endpoints:
 <br>
 <img src = 'images\Initial_screen.png'/>
 <br>
+
 ## GET /users 
    Returns a list of all users, e.g.: 
    { "users": [
@@ -16,6 +17,7 @@ The web service is used to query user data. It has the following endpoints:
 <br>
 <img src = 'images\user_list.png'/>
 <br>
+
 ## GET /users/{username} 
    Returns the data of a particular user or status code 404 if not found, e.g.:
    { "displayName": "Prachi Jhanwar", "department": "Computer Science" } 
